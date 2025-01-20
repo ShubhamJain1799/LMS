@@ -6,15 +6,15 @@ public class LibraryManagementSystem {
         Library library = new Library();
 
         // Adding books
-        library.addBook(new Book("The Great Gatsby", "F. Scott Fitzgerald", "123456", 1925));
-        library.addBook(new Book("1984", "George Orwell", "654321", 1949));
+        library.addBook(new Book("The Jain Dynasty", "F. Shubham Jain", "654321", 1999));
+        library.addBook(new Book("KD Joshi", "George Orwell", "654321", 1949));
 
         // Adding patrons
-        Patron patron = new Patron("Alice", "P001");
+        Patron patron = new Patron("Shubham", "L001");
         library.addPatron(patron);
 
         // Searching books
         SearchService titleSearch = new TitleSearchService();
-        System.out.println("Books with title '1984': " + library.searchBooks(titleSearch, "1984"));
+        System.out.println("Books with title 'KD Joshi': " + library.searchBooks(titleSearch, "KD Joshi"));
     }
 }
